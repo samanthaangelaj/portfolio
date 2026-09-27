@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Samantha Angela J — Designer, Artist & Producer</title>
+  <meta name="description" content="Creative technologist, interaction designer and producer. Mixed reality, surreal painting and large-scale events." />
+  <meta property="og:image" content="assets/work/art/heart-eye.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Caveat:wght@600&family=Questrial&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="cursor" aria-hidden="true">
+    <svg viewBox="-10 -10 20 20"><path d="M0-10Q1-1 10 0Q1 1 0 10Q-1 1-10 0Q-1-1 0-10Z"/></svg>
+    <span class="cursor__label"></span>
+  </div>
+
+  <header class="bar">
+    <a href="#top" class="bar__logo">S·A·J</a>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#studio">Studio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO: night sky + the watching eye -->
+    <section class="hero">
+      <canvas class="sky" id="sky" aria-hidden="true"></canvas>
+
+      <div class="eye-wrap" aria-hidden="true">
+        <svg class="eye" id="eye" viewBox="-220 -220 440 440">
+          <defs>
+            <radialGradient id="irisG" cx="0" cy="0" r="1" gradientUnits="objectBoundingBox" fx=".45" fy=".4">
+              <stop offset="0" stop-color="#c9d3ff" />
+              <stop offset=".35" stop-color="#6b7cff" />
+              <stop offset=".75" stop-color="#2d2aa8" />
+              <stop offset="1" stop-color="#120e4a" />
+            </radialGradient>
+            <radialGradient id="whiteG" cx=".5" cy=".45" r=".6">
+              <stop offset="0" stop-color="#fbf6ea" />
+              <stop offset="1" stop-color="#b9b4d8" />
+            </radialGradient>
+            <radialGradient id="haloG">
+              <stop offset="0" stop-color="#ffd98a" stop-opacity=".55" />
+              <stop offset=".5" stop-color="#ff5d8f" stop-opacity=".12" />
+              <stop offset="1" stop-color="#ff5d8f" stop-opacity="0" />
+            </radialGradient>
+            <clipPath id="almond"><path d="M-170 0Q0-120 170 0Q0 120-170 0Z" /></clipPath>
+          </defs>
+          <circle r="215" fill="url(#haloG)" />
+          <g class="eye__rays">
+            <path d="M0-215Q6-40 0-20Q-6-40 0-215ZM0 215Q6 40 0 20Q-6 40 0 215ZM-215 0Q-40 6-20 0Q-40-6-215 0ZM215 0Q40 6 20 0Q40-6 215 0Z" />
+          </g>
+          <g class="eye__orbit">
+            <ellipse rx="200" ry="70" />
+            <circle cx="200" cy="0" r="6" />
+            <circle cx="-120" cy="-56" r="4" />
+            <circle cx="60" cy="67" r="3" />
+          </g>
+          <g class="eye__lashes" id="lashes"></g>
+          <g class="eye__ball" id="ball">
+            <path d="M-170 0Q0-120 170 0Q0 120-170 0Z" fill="url(#whiteG)" />
+            <g clip-path="url(#almond)">
+              <g id="iris">
+                <circle r="58" fill="url(#irisG)" />
+                <g class="iris__lines" id="irisLines"></g>
+                <circle r="22" fill="#07051a" />
+                <circle cx="-16" cy="-18" r="9" fill="#fff" opacity=".9" />
+                <circle cx="14" cy="12" r="3.5" fill="#fff" opacity=".7" />
+              </g>
+            </g>
+            <path d="M-170 0Q0-120 170 0Q0 120-170 0Z" fill="none" stroke="#d6b36a" stroke-width="2.5" />
+          </g>
+        </svg>
+      </div>
+
+      <div class="hero__text">
+        <p class="eyebrow" id="roles"></p>
+        <h1 class="hero__name"><span id="first"></span> <em id="last"></em></h1>
+        <p class="hero__intro" id="intro"></p>
+      </div>
+      <a class="scroll-cue" href="#statement" data-cursor="enter">Enter<span></span></a>
+    </section>
+
+    <!-- STATEMENT -->
+    <section class="statement" id="statement">
+      <p class="statement__text" id="statement-text"></p>
+    </section>
+
+    <!-- FEATURED PROJECT -->
+    <section class="featured" id="featured"></section>
+
+    <!-- WORK INDEX -->
+    <section class="work" id="work">
+      <header class="section-head">
+        <p class="eyebrow">Portfolio</p>
+        <h2>Selected <em>projects</em></h2>
+      </header>
+      <ol class="index" id="index"></ol>
+      <div class="preview" id="preview" aria-hidden="true"><div class="preview__img"></div></div>
+    </section>
+
+    <!-- STUDIO WALL + ABOUT -->
+    <section class="studio" id="studio">
+      <header class="section-head">
+        <p class="eyebrow">About</p>
+        <h2>The studio <em>wall</em></h2>
+      </header>
+      <div class="studio__grid">
+        <div class="gilt">
+          <div class="board" id="board">
+            <p class="tape">drag the pins around</p>
+          </div>
+        </div>
+        <div class="about">
+          <p class="lead">I studied Industrial Engineering &amp; Management at KTH, specialising in Computer Science with track Interaction &amp; Visualization, with studies abroad in Valencia and Buenos Aires. I paint surreal, cosmic and nature canvases. Somewhere between those worlds I found my practice: <em>experiences at the edge of art, technology and physical space.</em></p>
+          <p>I like the whole arc of a project from the strange first idea, the prototype that half works, and the night two thousand people walk through the door.</p>
+          <div class="skills" id="skills"></div>
+          <p class="langs"><span class="eyebrow">Languages</span> <span id="langs"></span></p>
+          <a class="btn" id="cvlink" href="#" download data-cursor="cv">Download CV</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <p class="eyebrow">Write to me</p>
+      <a class="contact__mail" id="mail" href="#" data-cursor="mail"></a>
+      <div class="contact__links" id="links"></div>
+      <p class="fine">© <span id="year"></span> Samantha Angela Johansson — hand-built, no templates.</p>
+    </section>
+  </main>
+
+  <!-- CASE STUDY OVERLAY -->
+  <div class="case" id="case" role="dialog" aria-modal="true" aria-labelledby="case-title" hidden>
+    <button class="case__close" id="case-close" aria-label="Close">Close ✕</button>
+    <div class="case__inner" id="case-inner"></div>
+  </div>
+
+  <script src="content.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
