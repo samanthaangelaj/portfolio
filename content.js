@@ -1,14 +1,4 @@
-/* =========================================================
-   ALL SITE TEXT LIVES HERE. Edit this file, not the HTML.
-   - Anything written as [[like this]] shows up highlighted
-     on the site as a TO-DO. Replace it with real info.
-   - Reorder projects by moving whole { ... } blocks.
-   - Media: files live in assets/work/<id>/. The FIRST image
-     is the cover (used in the hover preview).
-     Video: { type: "video", src: "...mp4", caption: "..." }
-     YouTube: { type: "youtube", src: "https://youtu.be/...", caption: "..." }
-     Missing files show a framed placeholder with the path.
-   ========================================================= */
+
 
 const SITE = {
   first: "Samantha",
@@ -27,8 +17,7 @@ const SITE = {
   based: "Stockholm, Sweden and Kołobrzeg, Poland",
 };
 
-/* The big featured block on the home page, right after the intro quote.
-   If the video file is missing, the poster image is shown instead. */
+
 /* How pictures inside a project are laid out:
    "stack"   = one big picture per row (editorial)
    "masonry" = packed 3-column wall */
@@ -140,7 +129,7 @@ const PROJECTS = [
     title: "Nights for two thousand people",
     short: "Live experiences",
     tag: "Experience production · Spatial design",
-    year: "2021–23",
+    year: "2020–23",
     meta: {
       Role: "Project Manager · Event Producer",
       Where: "Stockholm · incl. Münchenbryggeriet",
